@@ -44,6 +44,5 @@ class Dog
    song.save
    song
   end
-  
-  end
+
 end
