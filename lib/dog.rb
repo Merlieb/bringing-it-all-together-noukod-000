@@ -7,5 +7,5 @@ class Dog
     @name = name
     @breed = breed
   end
-
+name
 end
