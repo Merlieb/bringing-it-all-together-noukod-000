@@ -9,3 +9,4 @@ class Dog
   end
 
 end
+d = Dog.new
