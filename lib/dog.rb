@@ -46,7 +46,7 @@ end
    dog
   end
 
-  def self.find_by_id id
+  def self.find_by_id(id)
     sql = <<-SQL
         SELECT * FROM dogs WHERE id = ? LIMIT 1
       SQL
@@ -55,9 +55,11 @@ end
   end
 
   def self.new_from_db(row)
-  params = {id: row[0], name: row[1],breed: row[2]}
-  new_dog = self.new(params)
-  new_dog
+    id = row[0]
+    name = row[1]
+    breed = row[2]
+    self.new(id: id, name: name, breed: breed)
+
 end
 
 def self.find_or_create_by(name:, breed:)
